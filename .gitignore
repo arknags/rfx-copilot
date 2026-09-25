@@ -1,0 +1,12 @@
+\# Python and virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets: never commit these
+.streamlit/secrets.toml
+.env
+
+# Local database: do not treat it as permanent hosted data
+data/app.db

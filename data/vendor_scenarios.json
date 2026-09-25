@@ -1,0 +1,13 @@
+[
+  {"question_id":"Q01","question":"Do you hold a valid ISO 9001 certification?","answer_type":"yes_no","required":true,"quality_gate":true},
+  {"question_id":"Q02","question":"Can you provide board-strength and GSM test certificates for every supplied batch?","answer_type":"yes_no","required":true,"quality_gate":true},
+  {"question_id":"Q03","question":"Can you meet a maximum 2% defect or rejection threshold?","answer_type":"yes_no","required":true,"quality_gate":true},
+  {"question_id":"Q04","question":"Can you provide an approved pre-production sample before mass supply?","answer_type":"yes_no","required":true,"quality_gate":true},
+  {"question_id":"Q05","question":"State your monthly production capacity in sheets.","answer_type":"number","required":true,"quality_gate":false},
+  {"question_id":"Q06","question":"State your standard lead time in calendar days.","answer_type":"number","required":true,"quality_gate":false},
+  {"question_id":"Q07","question":"Do you commit to replace manufacturing or transit defects at no charge?","answer_type":"yes_no","required":true,"quality_gate":false},
+  {"question_id":"Q08","question":"State the credit terms you offer.","answer_type":"text","required":true,"quality_gate":false},
+  {"question_id":"Q09","question":"State your manufacturing plant location or locations.","answer_type":"text","required":true,"quality_gate":false},
+  {"question_id":"Q10","question":"Do you hold a recycled-content or sustainability certification?","answer_type":"yes_no","required":false,"quality_gate":false}
+]
+

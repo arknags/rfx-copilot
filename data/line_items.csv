@@ -1,0 +1,31 @@
+item_id,description,ply,flute,outer_gsm,dimensions_mm,print_requirement,moisture_resistant,annual_quantity_sheets,standard_unit,delivery_location
+CS-001,3-ply brown kraft divider sheet,3,C,120,600x400,None,No,120000,sheet,Chennai warehouse
+CS-002,3-ply brown kraft divider sheet,3,C,140,700x500,None,No,110000,sheet,Chennai warehouse
+CS-003,3-ply brown kraft divider sheet,3,C,150,800x600,None,No,90000,sheet,Chennai warehouse
+CS-004,3-ply brown kraft divider sheet,3,C,160,1000x700,None,No,75000,sheet,Chennai warehouse
+CS-005,3-ply brown kraft divider sheet,3,C,180,1200x800,None,No,60000,sheet,Chennai warehouse
+CS-006,3-ply brown kraft divider sheet,3,C,180,1400x1000,None,No,40000,sheet,Chennai warehouse
+CS-007,3-ply brown kraft interleaving sheet,3,B,100,500x350,None,No,150000,sheet,Chennai warehouse
+CS-008,3-ply brown kraft interleaving sheet,3,B,110,600x450,None,No,130000,sheet,Chennai warehouse
+CS-009,3-ply brown kraft interleaving sheet,3,B,120,700x500,None,No,100000,sheet,Chennai warehouse
+CS-010,3-ply brown kraft interleaving sheet,3,B,140,800x600,None,No,85000,sheet,Chennai warehouse
+CS-011,3-ply brown kraft interleaving sheet,3,B,150,900x650,None,No,70000,sheet,Chennai warehouse
+CS-012,3-ply brown kraft interleaving sheet,3,B,160,1000x750,None,No,55000,sheet,Chennai warehouse
+CS-013,5-ply brown kraft heavy-duty sheet,5,BC,160,800x600,None,No,80000,sheet,Chennai warehouse
+CS-014,5-ply brown kraft heavy-duty sheet,5,BC,180,900x700,None,No,70000,sheet,Chennai warehouse
+CS-015,5-ply brown kraft heavy-duty sheet,5,BC,200,1000x800,None,No,65000,sheet,Chennai warehouse
+CS-016,5-ply brown kraft heavy-duty sheet,5,BC,220,1100x850,None,No,50000,sheet,Chennai warehouse
+CS-017,5-ply brown kraft heavy-duty sheet,5,BC,230,1200x900,None,No,45000,sheet,Chennai warehouse
+CS-018,5-ply brown kraft heavy-duty sheet,5,BC,250,1400x1000,None,No,35000,sheet,Chennai warehouse
+CS-019,5-ply appliance protection sheet,5,EBC,180,900x700,None,No,60000,sheet,Chennai warehouse
+CS-020,5-ply appliance protection sheet,5,EBC,200,1000x800,None,No,55000,sheet,Chennai warehouse
+CS-021,5-ply appliance protection sheet,5,EBC,220,1200x900,None,No,40000,sheet,Chennai warehouse
+CS-022,5-ply appliance protection sheet,5,EBC,240,1400x1000,None,No,30000,sheet,Chennai warehouse
+CS-023,3-ply white-top printable sheet,3,E,120,600x400,One-colour flexo,No,95000,sheet,Chennai warehouse
+CS-024,3-ply white-top printable sheet,3,E,140,800x600,One-colour flexo,No,80000,sheet,Chennai warehouse
+CS-025,3-ply white-top printable sheet,3,E,150,1000x700,Two-colour flexo,No,65000,sheet,Chennai warehouse
+CS-026,3-ply white-top printable sheet,3,E,160,1200x800,Two-colour flexo,No,50000,sheet,Chennai warehouse
+CS-027,5-ply moisture-resistant export sheet,5,BC,180,800x600,None,Yes,70000,sheet,Chennai warehouse
+CS-028,5-ply moisture-resistant export sheet,5,BC,200,1000x800,None,Yes,60000,sheet,Chennai warehouse
+CS-029,5-ply moisture-resistant export sheet,5,BC,220,1200x900,None,Yes,45000,sheet,Chennai warehouse
+CS-030,5-ply moisture-resistant export sheet,5,BC,250,1400x1000,None,Yes,35000,sheet,Chennai warehouse
