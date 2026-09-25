@@ -864,18 +864,6 @@ if active_tab == "Needs Review":
             f"Review tasks for RFx: {latest_approved_rfx['rfx_id']}"
         )
 
-        task_status_filter = st.selectbox(
-            "Show tasks",
-            options=[
-                "Open and clarification needed",
-                "Open only",
-                "Clarification needed only",
-                "Resolved",
-                "Excluded",
-                "All",
-            ],
-        )
-
         status_mapping = {
             "Open and clarification needed": [
                 "open",
@@ -893,10 +881,54 @@ if active_tab == "Needs Review":
             ],
         }
 
+        # Load all tasks once to provide a stable vendor filter. The selected
+        # status and vendor are then both applied to the visible task list.
+        all_review_tasks = list_review_tasks(
+            rfx_id=latest_approved_rfx["rfx_id"],
+            statuses=status_mapping["All"],
+        )
+        available_vendors = sorted(
+            {
+                task["vendor_name"]
+                for task in all_review_tasks
+                if task.get("vendor_name")
+            }
+        )
+
+        status_column, vendor_column = st.columns(2)
+
+        with status_column:
+            task_status_filter = st.selectbox(
+                "Show tasks",
+                options=[
+                    "Open and clarification needed",
+                    "Open only",
+                    "Clarification needed only",
+                    "Resolved",
+                    "Excluded",
+                    "All",
+                ],
+                key="needs_review_status_filter",
+            )
+
+        with vendor_column:
+            selected_vendor = st.selectbox(
+                "Vendor",
+                options=["All vendors", *available_vendors],
+                key="needs_review_vendor_filter",
+            )
+
         review_tasks = list_review_tasks(
             rfx_id=latest_approved_rfx["rfx_id"],
             statuses=status_mapping[task_status_filter],
         )
+
+        if selected_vendor != "All vendors":
+            review_tasks = [
+                task
+                for task in review_tasks
+                if task.get("vendor_name") == selected_vendor
+            ]
 
         if not review_tasks:
             st.success("No review tasks match the selected filter.")
@@ -1411,32 +1443,6 @@ if active_tab == "Award Recommendation":
                 )
                 or "No vendor quotes ingested"
             )
-
-            # Grid 1: recommendation only. It is deliberately read-only so
-            # the buyer can compare the calculated recommendation with the
-            # final award selections made in Grid 2 below.
-            # st.markdown("#### Award recommendation (read-only)")
-            # st.caption(
-            #     "This is the calculated recommendation. It does not create "
-            #     "an award and cannot be edited here."
-            # )
-            # st.dataframe(
-            #     decisions_df[
-            #         [
-            #             "item_id",
-            #             "description",
-            #             "annual_quantity_sheets",
-            #             "winner_vendor_name",
-            #             "selected_price_inr_per_sheet",
-            #             "annual_line_cost",
-            #             "decision_status",
-            #             "all_vendor_quotes",
-            #             "rationale",
-            #         ]
-            #     ],
-            #     width="stretch",
-            #     hide_index=True,
-            # )
 
             if award_grid_decisions:
                 # Grid 2: this is the only editable award grid.
