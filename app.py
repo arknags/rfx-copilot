@@ -1415,28 +1415,28 @@ if active_tab == "Award Recommendation":
             # Grid 1: recommendation only. It is deliberately read-only so
             # the buyer can compare the calculated recommendation with the
             # final award selections made in Grid 2 below.
-            st.markdown("#### Award recommendation (read-only)")
-            st.caption(
-                "This is the calculated recommendation. It does not create "
-                "an award and cannot be edited here."
-            )
-            st.dataframe(
-                decisions_df[
-                    [
-                        "item_id",
-                        "description",
-                        "annual_quantity_sheets",
-                        "winner_vendor_name",
-                        "selected_price_inr_per_sheet",
-                        "annual_line_cost",
-                        "decision_status",
-                        "all_vendor_quotes",
-                        "rationale",
-                    ]
-                ],
-                width="stretch",
-                hide_index=True,
-            )
+            # st.markdown("#### Award recommendation (read-only)")
+            # st.caption(
+            #     "This is the calculated recommendation. It does not create "
+            #     "an award and cannot be edited here."
+            # )
+            # st.dataframe(
+            #     decisions_df[
+            #         [
+            #             "item_id",
+            #             "description",
+            #             "annual_quantity_sheets",
+            #             "winner_vendor_name",
+            #             "selected_price_inr_per_sheet",
+            #             "annual_line_cost",
+            #             "decision_status",
+            #             "all_vendor_quotes",
+            #             "rationale",
+            #         ]
+            #     ],
+            #     width="stretch",
+            #     hide_index=True,
+            # )
 
             if award_grid_decisions:
                 # Grid 2: this is the only editable award grid.
